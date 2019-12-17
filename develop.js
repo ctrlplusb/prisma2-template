@@ -27,7 +27,11 @@ const killGraphQLServerProcess = () =>
   })
 
 async function generatePhoton() {
-  await runCmd('node_modules/.bin/prisma2 generate')
+  try {
+    await runCmd('node_modules/.bin/prisma2 generate')
+  } catch (err) {
+    console.log(err.message)
+  }
 }
 
 async function migrateDatabase() {
