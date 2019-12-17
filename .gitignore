@@ -1,1 +1,6 @@
 node_modules
+failed-calculateDatabaseSteps
+prisma/migrations
+prisma/dev.db
+yarn-error.log
+src/generated

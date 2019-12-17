@@ -2,15 +2,7 @@
   "name": "prisma2-template",
   "license": "MIT",
   "scripts": {
-    "build": "npm -s run clean && npm -s run generate && tsc",
-    "clean": "rm -rf dist",
-    "generate:nexus": "ts-node --transpile-only src/schema",
-    "generate:prisma": "prisma2 generate",
-    "generate": "npm -s run generate:prisma && npm -s run generate:nexus",
-    "postinstall": "npm -s run generate",
-    "seed": "ts-node prisma/seed",
-    "serve": "node dist/server",
-    "start": "ts-node-dev --no-notify --respawn --transpileOnly src/server"
+    "develop": "node ./develop"
   },
   "dependencies": {
     "@prisma/photon": "2.0.0-preview018.2",
@@ -20,10 +12,16 @@
     "nexus-prisma": "0.6.1"
   },
   "devDependencies": {
-    "@prisma/sdk": "0.0.99",
-    "@types/node": "12.12.17",
+    "@prisma/cli": "^0.1.29",
+    "@prisma/lift": "^0.3.227",
+    "@prisma/sdk": "0.0.100",
+    "@types/node": "12.12.18",
     "@types/ws": "6.0.4",
+    "chokidar": "^3.3.1",
+    "execa": "^3.4.0",
     "prisma2": "2.0.0-preview018.2",
+    "react": "^16.12.0",
+    "rimraf": "^3.0.0",
     "ts-node": "8.5.4",
     "ts-node-dev": "1.0.0-pre.44",
     "typescript": "3.7.3"

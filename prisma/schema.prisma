@@ -14,4 +14,11 @@ model Post {
   published Boolean  @default(false)
   title     String
   content   String?
+  category  Category
+}
+
+model Category {
+  id    String @default(cuid()) @id
+  name  String
+  posts Post[]
 }
