@@ -14,7 +14,7 @@
   "devDependencies": {
     "@prisma/cli": "^0.1.29",
     "@prisma/lift": "^0.3.227",
-    "@prisma/sdk": "0.0.100",
+    "@prisma/sdk": "2.20.0",
     "@types/node": "12.12.18",
     "@types/ws": "6.0.4",
     "chokidar": "^3.3.1",
